@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.Design;
 
 namespace tempConverter
@@ -96,14 +96,14 @@ namespace tempConverter
             return;
 
         }
-        private static void convertTemp(double intNumToConvert)
+        private static void convertTemp(double dblNumToConvert)
         {
             double celsius = 0;
             double fahrenheit = 0;
             try
             {
-                fahrenheit = (intNumToConvert * 9 / 5) + 32;
-                celsius = (intNumToConvert - 32) * 5 / 9;
+                fahrenheit = (dblNumToConvert * 9 / 5) + 32;
+                celsius = (dblNumToConvert - 32) * 5 / 9;
             }
             catch (ArithmeticException e)
             {
@@ -122,8 +122,8 @@ namespace tempConverter
                     Console.WriteLine("That temp could not be converted.");
                 }
                 else {
-                    Console.WriteLine($"{intNumToConvert} degrees Celsius converted to Fahrenheit is {fahrenheit}");
-                    Console.WriteLine($"{intNumToConvert} degrees Fahrenheit converted to Celsius is {celsius}");
+                    Console.WriteLine($"{dblNumToConvert} degrees Celsius converted to Fahrenheit is {fahrenheit}");
+                    Console.WriteLine($"{dblNumToConvert} degrees Fahrenheit converted to Celsius is {celsius}");
                 }
             }
             return;
